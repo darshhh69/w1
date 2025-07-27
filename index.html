@@ -272,12 +272,13 @@ foreach ($_SESSION['cart'] as $item) {
       display: <?html echo ($cart_item_count > 0) ? 'block' : 'none'; ?>; /* Hide if 0 items */
     }
 
-    .cart-icon {
+    .cart-icon-img {
   width: 24px;
   height: 24px;
   object-fit: contain;
   vertical-align: middle;
 }
+
 
     /* Cart Modal Styles (Copied from ourproducts.html) */
     .cart-modal {
@@ -735,9 +736,10 @@ foreach ($_SESSION['cart'] as $item) {
       </button>
       <div>
       <button class="cart-btn" id="cart-btn" aria-label="View Shopping Cart">
-        <img src="studio/cr.png" alt="Cart" class="cart-icon" />
-        <span class="cart-count" id="cart-count"><?html echo $cart_item_count; ?></span>
-      </button>
+  <img src="studio/cr.png" alt="Cart" class="cart-icon-img" />
+  <span class="cart-count" id="cart-count"><?php echo $cart_item_count; ?></span>
+</button>
+
           </div>
     </div>
   </header>
